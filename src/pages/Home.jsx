@@ -39,12 +39,12 @@ const Home = () => {
         {posts.map((post) => (
           <Card key={post.ID}>
             <CardHeader>
-              <Heading size="xl"> {post.title}</Heading>
+              <Heading size="3xl"> {post.title}</Heading>
               <Heading size="sm"> Posted by {post.User.name}</Heading>
               <Tag>{post.category}</Tag>
             </CardHeader>
             <CardBody>
-              <Text fontSize="3xl">{post.content}</Text>
+              <Text fontSize="2xl">{post.content}</Text>
             </CardBody>
             <CardFooter>
               <Link className="link" to={`/post/${post.ID}`}>

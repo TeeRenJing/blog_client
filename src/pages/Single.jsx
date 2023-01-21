@@ -73,12 +73,12 @@ const Single = () => {
   return (
     <Card size="lg">
       <CardHeader>
-        <Heading size="xl"> {post.title}</Heading>
+        <Heading size="4xl"> {post.title}</Heading>
         <Heading size="sm"> Posted by {post.User?.name}</Heading>
         <Tag>{post.category}</Tag>
       </CardHeader>
       <CardBody>
-        <Text fontSize="5xl">{post.content}</Text>
+        <Text fontSize="3xl">{post.content}</Text>
       </CardBody>
       <CardFooter>
         <VStack>
@@ -89,7 +89,7 @@ const Single = () => {
           >
             {comments.map((comment) => (
               <Box
-                minWidth="2000"
+                minWidth="300"
                 borderWidth="1px"
                 borderRadius="lg"
                 p="5"
@@ -101,17 +101,7 @@ const Single = () => {
             ))}
           </VStack>
 
-          {/*       
-          {comments.map((comment) => (
-            <Card size="sm" key={comment.ID}>
-              <CardHeader>
-                <Heading size="sm"> By {comment.User?.name}</Heading>
-              </CardHeader>
-              <CardBody>
-                <Text>{comment.comment}</Text>
-              </CardBody>
-            </Card>
-          ))} */}
+          
           {currentUser && (
             <>
               <Textarea
